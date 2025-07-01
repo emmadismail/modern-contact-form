@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <title>Modern Contact Form</title>
+  </head>
+  <body>
+    <header>
+      <h1>Contact Us</h1>
+    </header>
+    <main>
+      <form action="/" method="POST">
+        <section>
+          <h2>How Can We Help You?</h2>
+          <ul>
+            <li>
+              <label for="username">Your Name</label>
+              <input type="text" name="username" id="username" required />
+            </li>
+            <li>
+              <label for="email">Your Email Address</label>
+              <input type="email" name="email" id="email" required />
+            </li>
+            <li>
+              <label for="phone">Your Phone Number</label>
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                minlength="5"
+                required
+              />
+            </li>
+            <li>
+              <label for="message">Your Message</label>
+              <textarea
+                name="message"
+                id="message"
+                minlength="10"
+                maxlength="200"
+                rows="5"
+                required
+              ></textarea>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <label for="channel">How Did You Find Us?</label>
+          <select name="channel" id="channel" required>
+            <option value="search">Web Search</option>
+            <option value="word-of-mouth">Word of Mouth</option>
+            <option value="other">Other</option>
+          </select>
+        </section>
+        <section>
+          <h2>How Should We Reply?</h2>
+          <ul>
+            <li class="inline-control">
+              <input
+                type="radio"
+                name="reply"
+                id="reply-phone"
+                value="phone"
+                required
+              />
+              <label for="reply-phone">Call me</label>
+            </li>
+            <li class="inline-control">
+              <input
+                type="radio"
+                name="reply"
+                id="reply-email"
+                value="email"
+                required
+              />
+              <label for="reply-email">Email me</label>
+            </li>
+            <li class="inline-control">
+              <input
+                type="radio"
+                name="reply"
+                id="reply-none"
+                value="none"
+                required
+              />
+              <label for="reply-none">No replies</label>
+            </li>
+          </ul>
+        </section>
+        <section class="inline-control">
+          <input
+            type="checkbox"
+            name="accept-terms"
+            id="accept-terms"
+            required
+          />
+          <label for="accept-terms"
+            >Do you agree with our terms & conditions?</label
+          >
+        </section>
+        <section id="form-actions">
+          <button type="reset" class="btn-empty">Clear</button>
+          <button type="submit" class="btn-filled">Submit</button>
+        </section>
+      </form>
+    </main>
+  </body>
+</html>
